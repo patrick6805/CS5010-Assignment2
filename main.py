@@ -1,8 +1,10 @@
 def print_num_pattern(a, b):
+    if a < 0:
+        print(a, end="")
+        return
     print(a, end=" ")
-    if a >= 0:
-        print_num_pattern(a - b, b)
-        print(a, end=" ")
+    print_num_pattern(a - b, b)
+    print(f" {a}", end="")
 
 
 if __name__ == "__main__":
